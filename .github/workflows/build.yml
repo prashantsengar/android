@@ -19,7 +19,7 @@ jobs:
         with:
           java-version: 11
       - name: Run Tests
-        run: bash ./gradlew test --stacktrace  
+        run: bash ./gradlew clean test --stacktrace  
   apk:
     name: Generate APK
     needs: test
