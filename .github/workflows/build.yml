@@ -36,7 +36,7 @@ jobs:
       - name: Build APK
         run: bash ./gradlew assembleDebug --stacktrace
       - name: list files
-        run: ls -R
+        run: find . -type f -name "*.apk"
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
