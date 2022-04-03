@@ -50,6 +50,8 @@ allprojects {
 	}
 }
 
-task clean(type: Delete) {
-	delete rootProject.buildDir
+task('hello') {  
+    doLast {  
+        println rootProject.buildDir
+    }  
 }
