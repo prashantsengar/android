@@ -68,3 +68,4 @@ jobs:
           asset_path: apk/app-debug.apk
           asset_name: Cryptomater.apk
           asset_content_type: application/zip
+          
