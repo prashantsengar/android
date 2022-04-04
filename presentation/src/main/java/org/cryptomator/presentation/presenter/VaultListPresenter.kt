@@ -123,7 +123,7 @@ class VaultListPresenter @Inject constructor( //
 	}
 
 	private fun checkLicense() {
-		if (BuildConfig.FLAVOR == "apkstore" || BuildConfig.FLAVOR == "fdroid") {
+		if (BuildConfig.FLAVOR == "apkstoreeee" || BuildConfig.FLAVOR == "fdroideeee") {
 			licenseCheckUseCase //
 				.withLicense("") //
 				.run(object : NoOpResultHandler<LicenseCheck>() {
