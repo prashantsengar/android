@@ -7,6 +7,9 @@ on:
     tags:
       - 'v*'
 
+env:
+  API_KEY: XXXXXXXXXXXX  
+
 jobs:
 #   test:
 #     name: Run Unit Tests
@@ -31,6 +34,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: Set env vars
+        run: echo "{ONEDRIVE_API_KEY_DEBUG}=${{ secrets.ONEDRIVE_API_KEY_DEBUG }}" >> $GITHUB_ENV
+      - name: set env vars 2
+        run: echo "{ONEDRIVE_API_REDIRCT_URI_DEBUG}=${{ secrets.ONEDRIVE_REDIRECT_URI_DEBUG }}" >> $GITHUB_ENV
       - name: Submodule init
         run: git submodule init && git submodule update
       - name: Build APK
