@@ -38,6 +38,8 @@ jobs:
         run: echo "{ONEDRIVE_API_KEY_DEBUG}=${{ secrets.ONEDRIVE_API_KEY_DEBUG }}" >> $GITHUB_ENV
       - name: set env vars 2
         run: echo "{ONEDRIVE_API_REDIRCT_URI_DEBUG}=${{ secrets.ONEDRIVE_REDIRECT_URI_DEBUG }}" >> $GITHUB_ENV
+      - name: print env vars 2
+        run: echo "${{ secrets.ONEDRIVE_REDIRECT_URI_DEBUG }}"
       - name: Submodule init
         run: git submodule init && git submodule update
       - name: Build APK
